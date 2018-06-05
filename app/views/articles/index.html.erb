@@ -1,0 +1,11 @@
+
+<div>
+  <nav class=nav>
+   <h1><%= link_to "Instituto Henrique$$er", articles_path %></h1>
+   <h2><%= link_to "New Article", new_article_path %></h2>
+ </nav>
+  <% @articles.each do |article| %>
+    <h2><%= link_to article.title, article_path(article) %></h2>
+    <p><%= article.content %></p>
+  <% end %>
+</div>
